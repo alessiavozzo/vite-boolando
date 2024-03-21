@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+#site_footer {
+    height: 100px;
+    background-color: $bool-dark;
+    display: flex;
+    color: $bool-lighter;
+    border-bottom: 1px solid $bool-shadow;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        a {
+            color: $bool-lighter;
+            text-decoration: none;
+            padding-right: 0.4rem;
+        }
+    }
+
+    .social {
+        text-align: center;
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        a {
+            color: $bool-lighter;
+        }
+    }
+}

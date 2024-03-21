@@ -14,6 +14,7 @@
         a {
             color: $bool-lighter;
             text-decoration: none;
+            padding-right: 0.4rem;
         }
     }
 
@@ -22,6 +23,9 @@
     }
 
     .icons {
+        display: flex;
+        gap: 0.5rem;
+
         i {
             color: $bool-lighter;
         }
