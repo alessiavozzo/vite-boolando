@@ -1,6 +1,40 @@
 <script>
 export default {
-    name: "AppHeader"
+    name: "AppHeader",
+
+    data() {
+        return {
+            categoryLinks: [
+                {
+                    href: "#",
+                    category: "Donna"
+                },
+                {
+                    href: "#",
+                    category: "Uomo"
+                },
+                {
+                    href: "#",
+                    category: "Bambino"
+                }
+            ],
+
+            navIcons: [
+                {
+                    href: "#",
+                    iconClass: "fa-regular fa-user"
+                },
+                {
+                    href: "#",
+                    iconClass: "fa-regular fa-heart"
+                },
+                {
+                    href: "#",
+                    iconClass: "fa-solid fa-bag-shopping"
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -12,9 +46,7 @@ export default {
 
             <!-- categories left-->
             <div class="categories">
-                <a href="#">Donna</a>
-                <a href="#">Uomo</a>
-                <a href="#">Bambini</a>
+                <a v-for="link in categoryLinks" :href="link.href">{{ link.category }}</a>
             </div>
 
             <!-- logo center -->
@@ -22,14 +54,8 @@ export default {
 
             <!-- icons right -->
             <div class="icons">
-                <a href="#">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-regular fa-heart"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                <a v-for="icon in navIcons" :href="icon.href">
+                    <i :class="icon.iconClass"></i>
                 </a>
 
             </div>

@@ -11,6 +11,9 @@
     z-index: 1000;
 
     .categories {
+        display: flex;
+        gap: 1rem;
+
         a {
             color: $bool-lighter;
             text-decoration: none;
@@ -24,7 +27,7 @@
 
     .icons {
         display: flex;
-        gap: 0.5rem;
+        gap: 1rem;
 
         i {
             color: $bool-lighter;
