@@ -1,6 +1,33 @@
 <script>
 export default {
-    name: "AppFooter"
+    name: "AppFooter",
+
+    data() {
+        return {
+            socialIcons: [
+                {
+                    href: "#",
+                    socialClass: "fa-brands fa-square-twitter"
+                },
+                {
+                    href: "#",
+                    socialClass: "fa-brands fa-square-facebook"
+                },
+                {
+                    href: "#",
+                    socialClass: "fa-brands fa-square-instagram"
+                },
+                {
+                    href: "#",
+                    socialClass: "fa-brands fa-square-pinterest"
+                },
+                {
+                    href: "#",
+                    socialClass: "fa-brands fa-square-youtube"
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -23,20 +50,8 @@ export default {
                 <h4>Trovaci anche su:</h4>
 
                 <div class="social-icons">
-                    <a href="#">
-                        <i class="fa-brands fa-square-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-pinterest"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-square-youtube"></i>
+                    <a v-for="icon in socialIcons" :href="icon.href">
+                        <i :class="icon.socialClass"></i>
                     </a>
                 </div>
 
