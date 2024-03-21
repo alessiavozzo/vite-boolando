@@ -7,56 +7,62 @@ export default {
             cards: [
                 {
                     image: "/public/images/1.webp",
+                    hoverImage: "/public/images/1b.webp",
                     brand: "Levi's",
                     name: "RELAXED FIT TEE UNISEX",
                     discount: "-50%",
                     eco: true,
-                    oldPrice: 14.99,
-                    newPrice: 29.99
+                    oldPrice: 29.99,
+                    newPrice: 14.99
                 },
                 {
-                    image: "/public/images/1.webp",
-                    brand: "Levi's",
-                    name: "RELAXED FIT TEE UNISEX",
-                    discount: "-50%",
+                    image: "/public/images/2.webp",
+                    hoverImage: "/public/images/2b.webp",
+                    brand: "Guess",
+                    name: "ROSES TEE",
+                    discount: "-30%",
                     eco: false,
-                    oldPrice: 14.99,
-                    newPrice: 29.99
+                    oldPrice: 29.99,
+                    newPrice: 20.99
                 },
                 {
-                    image: "/public/images/1.webp",
+                    image: "/public/images/3.webp",
+                    hoverImage: "/public/images/3b.webp",
+                    brand: "Come Zucchero Filato",
+                    name: "VOGLIA DI COLORI PASTELLO",
+                    discount: "-30%",
+                    eco: false,
+                    oldPrice: 184.99,
+                    newPrice: 129.99
+                },
+                {
+                    image: "/public/images/4.webp",
+                    hoverImage: "/public/images/4b.webp",
                     brand: "Levi's",
                     name: "RELAXED FIT TEE UNISEX",
                     discount: "-50%",
                     eco: true,
-                    oldPrice: 14.99,
-                    newPrice: 29.99
+                    oldPrice: 29.99,
+                    newPrice: 14.99
                 },
                 {
-                    image: "/public/images/1.webp",
-                    brand: "Levi's",
-                    name: "RELAXED FIT TEE UNISEX",
-                    discount: "-50%",
-                    eco: true,
-                    oldPrice: 14.99,
-                    newPrice: 29.99
+                    image: "/public/images/5.webp",
+                    hoverImage: "/public/images/5b.webp",
+                    brand: "Maya Deluxe",
+                    name: "STRIPE BODIES",
+                    discount: null,
+                    eco: false,
+                    oldPrice: null,
+                    newPrice: 99.99
                 },
                 {
-                    image: "/public/images/1.webp",
-                    brand: "Levi's",
-                    name: "RELAXED FIT TEE UNISEX",
-                    discount: "-50%",
+                    image: "/public/images/6.webp",
+                    hoverImage: "/public/images/6b.webp",
+                    brand: "Esprit",
+                    name: "MAGLIONE - BLACK",
+                    discount: null,
                     eco: true,
-                    oldPrice: 14.99,
-                    newPrice: 29.99
-                },
-                {
-                    image: "/public/images/1.webp",
-                    brand: "Levi's",
-                    name: "RELAXED FIT TEE UNISEX",
-                    discount: "-50%",
-                    eco: true,
-                    oldPrice: 14.99,
+                    oldPrice: null,
                     newPrice: 29.99
                 }
             ]
@@ -76,23 +82,23 @@ export default {
                 <!-- Cards -->
                 <div class="card" v-for="card in cards">
                     <div class="item">
-                        <img :src="card.image" alt="card.name">
+                        <img :src="card.image" :alt="card.name">
                     </div>
 
                     <div class="overlay">
-                        <img src="" alt="overlay">
+                        <img :src="card.hoverImage" :alt="card.name">
                     </div>
 
                     <div class="info">
-                        <div class="discount">{{ card.discount }}</div>
+                        <div class="discount" v-if="card.discount !== null">{{ card.discount }}</div>
                         <div class="eco-friendly" v-if="card.eco">Sostenibilità</div>
                     </div>
 
                     <div class="text">
-                        <span class="brand">Levi's</span>
-                        <h5>RELAXED FIT TEE UNISEX</h5>
+                        <span class="brand">{{ card.brand }}</span>
+                        <h5>{{ card.name }}</h5>
                         <span class="new-price">{{ card.newPrice }}&euro;</span>
-                        <span class="old-price">{{ card.oldPrice }}&euro;</span>
+                        <span v-if="card.oldPrice !== null" class="old-price">{{ card.oldPrice }}&euro;</span>
                     </div>
 
                     <div class="heart">&hearts;</div>

@@ -5,7 +5,11 @@
 
     .card {
         position: relative;
-        width: calc((100% / 12) * 4);
+        width: calc(((100% / 12) * 4) - 1rem);
+        margin-bottom: 1rem;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: 0 0 3px 1px $bool-shadow;
 
         img {
             width: 100%;
@@ -26,7 +30,7 @@
     .info {
         position: absolute;
         left: 0;
-        bottom: 5rem;
+        bottom: 6rem;
         display: flex;
         gap: 0.3rem;
 
@@ -46,6 +50,8 @@
     }
 
     .text {
+        padding: 0.5rem;
+
         .brand {
             color: $bool-light;
             font-size: 0.8rem;
@@ -55,6 +61,7 @@
             color: $bool-danger;
             font-weight: bold;
             font-size: 0.9rem;
+            padding-right: 0.3rem;
         }
 
         .old-price {
@@ -65,9 +72,14 @@
 
     .heart {
         position: absolute;
-        top: 2%;
+        font-size: 1.2rem;
+        top: 1rem;
         right: 0;
-        padding: 0 0.3rem;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $bool-lighter;
 
         &:hover {
