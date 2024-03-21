@@ -1,0 +1,78 @@
+@use "./variables" as *;
+
+#site_main {
+    margin-top: 6rem;
+
+    .card {
+        position: relative;
+        width: calc((100% / 12) * 4);
+
+        img {
+            width: 100%;
+        }
+
+        &:hover .overlay {
+            display: block;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .info {
+        position: absolute;
+        left: 0;
+        bottom: 5rem;
+        display: flex;
+        gap: 0.3rem;
+
+        .discount {
+            background-color: $bool-danger;
+            padding: 0.1rem 0.4rem;
+            color: $bool-lighter;
+            font-size: 0.8rem;
+        }
+
+        .eco-friendly {
+            background-color: $bool-accent;
+            padding: 0.1rem 0.4rem;
+            color: $bool-lighter;
+            font-size: 0.8rem;
+        }
+    }
+
+    .text {
+        .brand {
+            color: $bool-light;
+            font-size: 0.8rem;
+        }
+
+        .new-price {
+            color: $bool-danger;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .old-price {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+        }
+    }
+
+    .heart {
+        position: absolute;
+        top: 2%;
+        right: 0;
+        padding: 0 0.3rem;
+        background-color: $bool-lighter;
+
+        &:hover {
+            color: $bool-danger;
+            cursor: pointer;
+        }
+    }
+}
