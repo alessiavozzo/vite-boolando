@@ -4,6 +4,7 @@ export default {
 
     data() {
         return {
+            hoverEffect: false,
             cards: [
                 {
                     image: "/public/images/1.webp",
@@ -80,13 +81,10 @@ export default {
             <div class="row">
 
                 <!-- Cards -->
-                <div class="card" v-for="card in cards">
+                <div class="card" v-for="card in cards" @mouseover="card.hoverEffect = true"
+                    @mouseleave="card.hoverEffect = false">
                     <div class="item">
-                        <img :src="card.image" :alt="card.name">
-                    </div>
-
-                    <div class="overlay">
-                        <img :src="card.hoverImage" :alt="card.name">
+                        <img :src="card.hoverEffect === true ? card.hoverImage : card.image" :alt="card.name">
                     </div>
 
                     <div class="info">

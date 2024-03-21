@@ -15,17 +15,6 @@
         img {
             width: 100%;
         }
-
-        &:hover .overlay {
-            display: block;
-        }
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
     }
 
     .info {
