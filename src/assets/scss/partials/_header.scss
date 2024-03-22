@@ -12,13 +12,23 @@
 
     .categories {
         display: flex;
-        gap: 1rem;
 
-        a {
-            color: $bool-lighter;
-            text-decoration: none;
-            padding-right: 0.4rem;
+        .fa-bars {
+            display: none;
         }
+
+        ul {
+            @include display-flex-center;
+            gap: 1rem;
+            list-style: none;
+
+            a {
+                color: $bool-lighter;
+                text-decoration: none;
+                padding-right: 0.4rem;
+            }
+        }
+
     }
 
     .logo {

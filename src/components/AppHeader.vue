@@ -7,7 +7,8 @@ export default {
     data() {
         return {
             categoryLinks: categoryLinks,
-            navIcons: navIcons
+            navIcons: navIcons,
+            appear: false
         }
     }
 }
@@ -21,7 +22,13 @@ export default {
 
             <!-- categories left-->
             <div class="categories">
-                <a v-for="link in categoryLinks" :href="link.href">{{ link.category }}</a>
+                <i class="fa-solid fa-bars" @click="appear = !appear"></i>
+                <ul :class="appear ? 'd-block' : 'd-none'">
+                    <li v-for="link in categoryLinks">
+                        <a :href="link.href">{{ link.category }}</a>
+                    </li>
+                </ul>
+
             </div>
 
             <!-- logo center -->

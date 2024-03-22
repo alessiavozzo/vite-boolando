@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @media screen and (max-width : 991px) {
     .card {
         width: calc(((100% / 12) * 6) - 1rem) !important;
@@ -14,4 +16,36 @@
         width: 100% !important;
     }
 
+    .categories {
+        @include display-flex-center;
+        position: relative;
+
+        .fa-bars {
+            display: block !important;
+        }
+
+        ul {
+            position: absolute;
+            background-color: $bool-shadow;
+            top: 2.3rem;
+            left: 0;
+            padding: 0.3rem;
+
+            li {
+                padding: 0.4rem 0;
+
+                &:hover {
+                    background-color: $bool-navbar;
+                }
+            }
+        }
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+    .d-block {
+        display: block !important;
+    }
 }
