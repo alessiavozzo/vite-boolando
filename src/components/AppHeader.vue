@@ -1,38 +1,13 @@
 <script>
+import { categoryLinks } from "../assets/js/links&icons.js";
+import { navIcons } from "../assets/js/links&icons.js";
 export default {
     name: "AppHeader",
 
     data() {
         return {
-            categoryLinks: [
-                {
-                    href: "#",
-                    category: "Donna"
-                },
-                {
-                    href: "#",
-                    category: "Uomo"
-                },
-                {
-                    href: "#",
-                    category: "Bambino"
-                }
-            ],
-
-            navIcons: [
-                {
-                    href: "#",
-                    iconClass: "fa-regular fa-user"
-                },
-                {
-                    href: "#",
-                    iconClass: "fa-regular fa-heart"
-                },
-                {
-                    href: "#",
-                    iconClass: "fa-solid fa-bag-shopping"
-                }
-            ]
+            categoryLinks: categoryLinks,
+            navIcons: navIcons
         }
     }
 }

@@ -1,31 +1,11 @@
 <script>
+import { socialIcons } from "../assets/js/links&icons.js";
 export default {
     name: "AppFooter",
 
     data() {
         return {
-            socialIcons: [
-                {
-                    href: "#",
-                    socialClass: "fa-brands fa-square-twitter"
-                },
-                {
-                    href: "#",
-                    socialClass: "fa-brands fa-square-facebook"
-                },
-                {
-                    href: "#",
-                    socialClass: "fa-brands fa-square-instagram"
-                },
-                {
-                    href: "#",
-                    socialClass: "fa-brands fa-square-pinterest"
-                },
-                {
-                    href: "#",
-                    socialClass: "fa-brands fa-square-youtube"
-                }
-            ]
+            socialIcons: socialIcons
         }
     }
 }
