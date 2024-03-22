@@ -5,3 +5,15 @@ $bool-accent: green;
 $bool-lighter: white;
 $bool-dark: rgba(26, 26, 26, 1);
 $bool-light: darkgray;
+
+@mixin display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

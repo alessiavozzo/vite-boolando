@@ -61,15 +61,13 @@
     }
 
     .heart {
+        @include display-flex-center;
         position: absolute;
         font-size: 1.2rem;
         top: 1rem;
         right: 0;
         width: 2rem;
         height: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: $bool-lighter;
 
         &:hover {

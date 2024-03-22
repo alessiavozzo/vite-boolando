@@ -8,9 +8,7 @@
     border-bottom: 1px solid $bool-shadow;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include display-flex-between;
     }
 
     .copyright {
@@ -25,8 +23,7 @@
         text-align: center;
 
         .social-icons {
-            display: flex;
-            justify-content: center;
+            @include display-flex-center;
             gap: 0.5rem;
         }
 
