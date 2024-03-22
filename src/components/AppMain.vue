@@ -7,9 +7,6 @@ export default {
     components: {
         ProductCard
     },
-    props: {
-        card: Object
-    },
 
     data() {
         return {

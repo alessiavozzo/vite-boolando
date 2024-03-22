@@ -1,7 +1,9 @@
 <script>
 export default {
     name: "ProductCard",
-    props: ["card"]
+    props: {
+        card: Object
+    }
 }
 </script>
 
