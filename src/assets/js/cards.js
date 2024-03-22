@@ -7,8 +7,7 @@ export const cards = [
         name: "RELAXED FIT TEE UNISEX",
         discount: "-50%",
         eco: true,
-        oldPrice: 29.99,
-        newPrice: 14.99
+        price: 29.99
     },
     {
         id: 2,
@@ -18,8 +17,7 @@ export const cards = [
         name: "ROSES TEE",
         discount: "-30%",
         eco: false,
-        oldPrice: 29.99,
-        newPrice: 20.99
+        price: 29.99
     },
     {
         id: 3,
@@ -29,8 +27,7 @@ export const cards = [
         name: "VOGLIA DI COLORI PASTELLO",
         discount: "-30%",
         eco: false,
-        oldPrice: 184.99,
-        newPrice: 129.99
+        price: 184.99
     },
     {
         id: 4,
@@ -40,8 +37,7 @@ export const cards = [
         name: "RELAXED FIT TEE UNISEX",
         discount: "-50%",
         eco: true,
-        oldPrice: 29.99,
-        newPrice: 14.99
+        price: 29.99
     },
     {
         id: 5,
@@ -51,8 +47,7 @@ export const cards = [
         name: "STRIPE BODIES",
         discount: null,
         eco: false,
-        oldPrice: null,
-        newPrice: 99.99
+        price: 99.99
     },
     {
         id: 6,
@@ -62,7 +57,6 @@ export const cards = [
         name: "MAGLIONE - BLACK",
         discount: null,
         eco: true,
-        oldPrice: null,
-        newPrice: 29.99
+        price: 29.99
     }
 ]
