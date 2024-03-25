@@ -1,6 +1,7 @@
 <script>
 import ProductCard from './ProductCard.vue';
-import { cards } from "../assets/js/cards.js";
+//import { cards } from "../assets/js/cards.js";
+import { state } from "../state.js"
 
 export default {
     name: "AppMain",
@@ -11,8 +12,12 @@ export default {
     data() {
         return {
             hoverEffect: false,
-            cards: cards
+            //cards: cards
+            state: state
         }
+    },
+    mounted() {
+        state.getCards()
     }
 }
 </script>
@@ -24,8 +29,8 @@ export default {
         <div class="container main">
 
             <div class="row">
-                <ProductCard :card="card" :key="card.id" v-for="card in cards" @mouseover="card.hoverEffect = true"
-                    @mouseleave="card.hoverEffect = false" />
+                <ProductCard :card="card" :key="card.id" v-for="card in state.cards"
+                    @mouseover="card.hoverEffect = true" @mouseleave="card.hoverEffect = false" />
             </div>
 
         </div>
