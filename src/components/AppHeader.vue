@@ -32,7 +32,7 @@ export default {
             </div>
 
             <!-- logo center -->
-            <img class="logo" src="/public/images/boolean-logo.png" alt="boolean-logo">
+            <img class="logo" src="/images/boolean-logo.png" alt="boolean-logo">
 
             <!-- icons right -->
             <div class="icons">

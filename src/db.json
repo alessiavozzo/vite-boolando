@@ -2,8 +2,8 @@
     "cards": [
         {
             "id": 1,
-            "image": "/public/images/1.webp",
-            "hoverImage": "/public/images/1b.webp",
+            "image": "/images/1.webp",
+            "hoverImage": "/images/1b.webp",
             "brand": "Levi's",
             "name": "RELAXED FIT TEE UNISEX",
             "discount": "-50%",
@@ -12,8 +12,8 @@
         },
         {
             "id": 2,
-            "image": "/public/images/2.webp",
-            "hoverImage": "/public/images/2b.webp",
+            "image": "/images/2.webp",
+            "hoverImage": "/images/2b.webp",
             "brand": "Guess",
             "name": "ROSES TEE",
             "discount": "-30%",
@@ -22,8 +22,8 @@
         },
         {
             "id": 3,
-            "image": "/public/images/3.webp",
-            "hoverImage": "/public/images/3b.webp",
+            "image": "/images/3.webp",
+            "hoverImage": "/images/3b.webp",
             "brand": "Come Zucchero Filato",
             "name": "VOGLIA DI COLORI PASTELLO",
             "discount": "-30%",
@@ -32,8 +32,8 @@
         },
         {
             "id": 4,
-            "image": "/public/images/4.webp",
-            "hoverImage": "/public/images/4b.webp",
+            "image": "/images/4.webp",
+            "hoverImage": "/images/4b.webp",
             "brand": "Levi's",
             "name": "RELAXED FIT TEE UNISEX",
             "discount": "-50%",
@@ -42,8 +42,8 @@
         },
         {
             "id": 5,
-            "image": "/public/images/5.webp",
-            "hoverImage": "/public/images/5b.webp",
+            "image": "/images/5.webp",
+            "hoverImage": "/images/5b.webp",
             "brand": "Maya Deluxe",
             "name": "STRIPE BODIES",
             "discount": null,
@@ -52,8 +52,8 @@
         },
         {
             "id": 6,
-            "image": "/public/images/6.webp",
-            "hoverImage": "/public/images/6b.webp",
+            "image": "/images/6.webp",
+            "hoverImage": "/images/6b.webp",
             "brand": "Esprit",
             "name": "MAGLIONE - BLACK",
             "discount": null,
