@@ -24,7 +24,7 @@ export default {
             <h5 @click="$emit('showProduct', card)">{{ card.name }}</h5>
             <span class="new-price" v-if="card.discount !== null">{{ (card.price - (card.price *
                 Math.abs(parseInt(card.discount))) / 100).toFixed(2) }}&euro;</span>
-            <span class="new-price" v-else>{{ card.price }}</span>
+            <span class="new-price" v-else>{{ card.price }}&euro;</span>
             <span v-if="card.discount !== null" class="old-price">{{ card.price }}&euro;</span>
         </div>
 

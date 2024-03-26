@@ -42,7 +42,27 @@ export default {
                     @mouseover="card.hoverEffect = true" @mouseleave="card.hoverEffect = false"
                     @show-product="showProductInfo" />
 
-                <div class="modal" v-if="modalWindow">{{ modalContent.name }}{{ modalContent.price }}</div>
+                <!-- modal window -->
+                <div class="modal" v-if="modalWindow">
+
+                    <!-- left -->
+                    <div class="modal-left">
+                        <div class="prod-image">
+                            <img :src="modalContent.image" alt="">
+                        </div>
+                    </div>
+                    <!-- right -->
+                    <div class="modal-right">
+                        <div class="prod-brand"><strong>Marca: </strong>{{ modalContent.brand }}</div>
+                        <div class="prod-name"><strong>Prodotto: </strong>{{ modalContent.name }}</div>
+                        <div class="prod-price">
+                            <strong>Prezzo: </strong>
+                            <span v-if="modalContent.discount !== null">{{ (modalContent.price - (modalContent.price *
+                    Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
+                            <span v-else>{{ modalContent.price }}&euro;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
