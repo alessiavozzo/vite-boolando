@@ -2,22 +2,37 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
+import ProductModal from "./components/ProductModal.vue";
 
 export default {
   name: "App",
   components: {
     AppHeader,
     AppMain,
-    AppFooter
-  }
+    AppFooter,
+    ProductModal
+  },
+  data() {
+    return {
+      modalWindow: false,
+      modalContent: null
+    }
+  },
+  methods: {
+    showProductInfo(card) {
+      //console.log(card);
+      this.modalWindow = true;
+      this.modalContent = card;
+    }
+  },
 }
 </script>
 
 <template>
-  <h1>hello</h1>
   <AppHeader />
-  <AppMain />
+  <AppMain :showProductInfo="showProductInfo" />
   <AppFooter />
+  <ProductModal v-if="modalWindow" :modalContent="modalContent" @close-modal-window="modalWindow = false" />
 
 </template>
 

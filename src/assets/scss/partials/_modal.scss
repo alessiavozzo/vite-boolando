@@ -41,7 +41,6 @@
 
         .modal-bottom {
             display: flex;
-            align-items: center;
             padding: 1rem;
 
             .modal-left {
@@ -94,6 +93,8 @@
             .modal-right {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                height: 200px;
                 gap: 0.8rem;
             }
         }
