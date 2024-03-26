@@ -22,26 +22,36 @@ export default {
     <!-- modal window -->
     <div class="modal">
         <div class="modal-content">
+            <!-- top: bar with closing button -->
             <div class="modal-top">
                 <button type="button" class="close" @click="$emit('closeModalWindow')">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
+            <!-- bottom -->
             <div class="modal-bottom">
                 <!-- left -->
                 <div class="modal-left">
-                    <div class="prod-image">
-                        <img :src="changeImage === true ? modalContent.image : modalContent.hoverImage" alt="">
+                    <div class="prod-images">
+                        <!-- thumbnail -->
                         <div class="thumbnail">
-                            <img style="height: 50px;" :src="modalContent.image" alt=""
+                            <img @click="changeImage = true" :src="modalContent.image" alt=""
                                 :style="changeImage === true ? 'border: 1px solid orange' : 'border: none'">
-                            <img style="height: 50px;" :src="modalContent.hoverImage" alt=""
+                            <img @click="changeImage = false" :src="modalContent.hoverImage" alt=""
                                 :style="changeImage === false ? 'border: 1px solid orange' : 'border: none'">
                         </div>
-                        <div class="buttons">
-                            <button @click="changeActiveImage()">+</button>
-                            <button @click="changeActiveImage()">-</button>
+                        <!-- img+controls -->
+                        <div class="image">
+                            <img :src="changeImage === true ? modalContent.image : modalContent.hoverImage" alt="">
+                            <div class="buttons">
+                                <button @click="changeActiveImage()">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button @click="changeActiveImage()">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
