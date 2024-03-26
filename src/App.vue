@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     showProductInfo(card) {
-      //console.log(card);
       this.modalWindow = true;
       this.modalContent = card;
     }

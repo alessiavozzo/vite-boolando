@@ -20,8 +20,8 @@ export default {
 
 <template>
     <!-- modal window -->
-    <div class="modal">
-        <div class="modal-content">
+    <div class="modal" @click="$emit('closeModalWindow')">
+        <div class=" modal-content" @click.stop="closeModalWindow">
             <!-- top: bar with closing button -->
             <div class="modal-top">
                 <button type="button" class="close" @click="$emit('closeModalWindow')">
@@ -62,7 +62,7 @@ export default {
                     <div class="prod-price">
                         <strong>Prezzo: </strong>
                         <span v-if="modalContent.discount !== null">{{ (modalContent.price - (modalContent.price
-                    * Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
+        * Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
                         <span v-else>{{ modalContent.price }}&euro;</span>
                     </div>
                 </div>

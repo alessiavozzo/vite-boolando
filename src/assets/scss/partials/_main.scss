@@ -79,4 +79,8 @@
             cursor: pointer;
         }
     }
+
+    .red {
+        color: $bool-danger;
+    }
 }

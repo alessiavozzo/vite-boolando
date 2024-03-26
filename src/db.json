@@ -8,7 +8,8 @@
             "name": "RELAXED FIT TEE UNISEX",
             "discount": "-50%",
             "eco": true,
-            "price": 29.99
+            "price": 29.99,
+            "isInFavorite": false
         },
         {
             "id": 2,
@@ -18,7 +19,8 @@
             "name": "ROSES TEE",
             "discount": "-30%",
             "eco": false,
-            "price": 29.99
+            "price": 29.99,
+            "isInFavorite": false
         },
         {
             "id": 3,
@@ -28,7 +30,8 @@
             "name": "VOGLIA DI COLORI PASTELLO",
             "discount": "-30%",
             "eco": false,
-            "price": 184.99
+            "price": 184.99,
+            "isInFavorite": false
         },
         {
             "id": 4,
@@ -38,7 +41,8 @@
             "name": "RELAXED FIT TEE UNISEX",
             "discount": "-50%",
             "eco": true,
-            "price": 29.99
+            "price": 29.99,
+            "isInFavorite": false
         },
         {
             "id": 5,
@@ -48,7 +52,8 @@
             "name": "STRIPE BODIES",
             "discount": null,
             "eco": false,
-            "price": 99.99
+            "price": 99.99,
+            "isInFavorite": false
         },
         {
             "id": 6,
@@ -58,7 +63,8 @@
             "name": "MAGLIONE - BLACK",
             "discount": null,
             "eco": true,
-            "price": 29.99
+            "price": 29.99,
+            "isInFavorite": false
         }
     ]
 }
