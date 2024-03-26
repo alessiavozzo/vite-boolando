@@ -76,3 +76,51 @@
         }
     }
 }
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bool-lighter;
+    border-radius: 20px;
+    border: 1px solid black;
+
+    .modal-top {
+        background-color: $bool-navbar;
+        padding: 1rem;
+        text-align: right;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        button {
+            border: none;
+            background-color: $bool-navbar;
+            color: $bool-lighter;
+        }
+    }
+
+    .modal-bottom {
+        @include display-flex-center;
+        padding: 1rem;
+
+        .modal-left {
+            .prod-image {
+                width: 200px;
+                height: 200px;
+                text-align: center;
+
+                >img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .modal-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+    }
+
+}
