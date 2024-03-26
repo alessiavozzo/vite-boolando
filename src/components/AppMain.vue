@@ -1,12 +1,14 @@
 <script>
 import ProductCard from './ProductCard.vue';
+import ProductModal from "./ProductModal.vue";
 //import { cards } from "../assets/js/cards.js";
-import { state } from "../state.js"
+import { state } from "../state.js";
 
 export default {
     name: "AppMain",
     components: {
-        ProductCard
+        ProductCard,
+        ProductModal
     },
 
     data() {
@@ -41,46 +43,10 @@ export default {
                 <ProductCard :card="card" :key="card.id" v-for="card in state.cards"
                     @mouseover="card.hoverEffect = true" @mouseleave="card.hoverEffect = false"
                     @show-product="showProductInfo" />
-
             </div>
 
             <!-- modal window -->
-
-
-            <div class="modal-container" v-if="modalWindow">
-                <div class="modal-content">
-                    <div class="modal-top">
-                        <button type="button" @click="modalWindow = false">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                    </div>
-
-                    <div class="modal-bottom">
-                        <!-- left -->
-                        <div class="modal-left">
-                            <div class="prod-image">
-                                <img :src="modalContent.image" alt="">
-                            </div>
-                            <div class="prod-image">
-                                <img :src="modalContent.hoverImage" alt="">
-                            </div>
-                        </div>
-                        <!-- right -->
-                        <div class="modal-right">
-                            <div class="prod-brand"><strong>Marca: </strong>{{ modalContent.brand }}</div>
-                            <div class="prod-name"><strong>Prodotto: </strong>{{ modalContent.name }}</div>
-                            <div class="prod-price">
-                                <strong>Prezzo: </strong>
-                                <span v-if="modalContent.discount !== null">{{ (modalContent.price - (modalContent.price
-                    *
-                    Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
-                                <span v-else>{{ modalContent.price }}&euro;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <ProductModal v-if="modalWindow" :modalContent="modalContent" @close-modal-window="modalWindow = false" />
 
         </div>
 

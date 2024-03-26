@@ -3,7 +3,8 @@ export default {
     name: "ProductCard",
     props: {
         card: Object
-    }
+    },
+    emits: ["showProduct"]
 }
 </script>
 
