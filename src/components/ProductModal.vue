@@ -4,7 +4,17 @@ export default {
     props: {
         modalContent: Object
     },
-    emits: ["closeModalWindow"]
+    emits: ["closeModalWindow"],
+    data() {
+        return {
+            changeImage: true
+        }
+    },
+    methods: {
+        changeActiveImage() {
+            this.changeImage = !this.changeImage
+        }
+    }
 }
 </script>
 
@@ -13,7 +23,7 @@ export default {
     <div class="modal">
         <div class="modal-content">
             <div class="modal-top">
-                <button type="button" @click="$emit('closeModalWindow')">
+                <button type="button" class="close" @click="$emit('closeModalWindow')">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -22,10 +32,17 @@ export default {
                 <!-- left -->
                 <div class="modal-left">
                     <div class="prod-image">
-                        <img :src="modalContent.image" alt="">
-                    </div>
-                    <div class="prod-image">
-                        <img :src="modalContent.hoverImage" alt="">
+                        <img :src="changeImage === true ? modalContent.image : modalContent.hoverImage" alt="">
+                        <div class="thumbnail">
+                            <img style="height: 50px;" :src="modalContent.image" alt=""
+                                :style="changeImage === true ? 'border: 1px solid orange' : 'border: none'">
+                            <img style="height: 50px;" :src="modalContent.hoverImage" alt=""
+                                :style="changeImage === false ? 'border: 1px solid orange' : 'border: none'">
+                        </div>
+                        <div class="buttons">
+                            <button @click="changeActiveImage()">+</button>
+                            <button @click="changeActiveImage()">-</button>
+                        </div>
                     </div>
                 </div>
                 <!-- right -->
