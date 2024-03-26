@@ -9,6 +9,10 @@
         display: flex;
         flex-direction: column;
     }
+
+    .modal-content {
+        width: 75% !important;
+    }
 }
 
 @media screen and (max-width : 540px) {
@@ -37,6 +41,20 @@
                 &:hover {
                     background-color: $bool-navbar;
                 }
+            }
+        }
+    }
+
+    .modal-content {
+        .modal-bottom {
+            flex-direction: column;
+
+            .prod-images {
+                justify-content: center;
+            }
+
+            .modal-right {
+                height: 100px !important;
             }
         }
     }
