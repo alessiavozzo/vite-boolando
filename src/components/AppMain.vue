@@ -42,13 +42,17 @@ export default {
                     @mouseover="card.hoverEffect = true" @mouseleave="card.hoverEffect = false"
                     @show-product="showProductInfo" />
 
-                <!-- modal window -->
+            </div>
+
+            <!-- modal window -->
 
 
-                <div class="modal" v-if="modalWindow">
-
+            <div class="modal-container" v-if="modalWindow">
+                <div class="modal-content">
                     <div class="modal-top">
-                        <button type="button" @click="modalWindow = false">X</button>
+                        <button type="button" @click="modalWindow = false">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
 
                     <div class="modal-bottom">
@@ -56,6 +60,9 @@ export default {
                         <div class="modal-left">
                             <div class="prod-image">
                                 <img :src="modalContent.image" alt="">
+                            </div>
+                            <div class="prod-image">
+                                <img :src="modalContent.hoverImage" alt="">
                             </div>
                         </div>
                         <!-- right -->
@@ -71,9 +78,7 @@ export default {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
 
             </div>
 

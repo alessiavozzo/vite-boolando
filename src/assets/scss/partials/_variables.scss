@@ -5,6 +5,7 @@ $bool-accent: green;
 $bool-lighter: white;
 $bool-dark: rgba(26, 26, 26, 1);
 $bool-light: darkgray;
+$bg-modal: rgba(112, 112, 112, 0.356);
 
 @mixin display-flex-center {
     display: flex;
