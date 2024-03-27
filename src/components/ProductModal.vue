@@ -61,11 +61,16 @@ export default {
                     <div class="prod-name"><strong>Prodotto: </strong>{{ modalContent.name }}</div>
                     <div class="prod-price">
                         <strong>Prezzo: </strong>
-                        <span v-if="modalContent.discount !== null">{{ (modalContent.price - (modalContent.price
-        * Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
-                        <span v-else>{{ modalContent.price }}&euro;</span>
+                        <span v-if="modalContent.discount !== null" class="old-price">{{ modalContent.price
+                            }}&euro;</span>
+                        <span class="price" v-if="modalContent.discount !== null">{{ (modalContent.price -
+        (modalContent.price
+            * Math.abs(parseInt(modalContent.discount))) / 100).toFixed(2) }}&euro;</span>
+                        <span class="price" v-else>{{ modalContent.price }}&euro;</span>
                     </div>
                 </div>
+
+                <div class="discount" v-if="modalContent.discount !== null">{{ modalContent.discount }}</div>
             </div>
         </div>
 

@@ -18,7 +18,8 @@
         background-color: $bool-lighter;
         border-radius: 20px;
         border: 1px solid black;
-        width: 600px;
+        max-width: 600px;
+        width: 75%;
 
         .modal-top {
             background-color: $bool-navbar;
@@ -42,6 +43,7 @@
         .modal-bottom {
             display: flex;
             padding: 1rem;
+            position: relative;
 
             .modal-left {
                 .prod-images {
@@ -96,6 +98,28 @@
                 justify-content: center;
                 height: 200px;
                 gap: 0.8rem;
+
+                .price {
+                    color: $bool-danger;
+                    font-weight: bold;
+                }
+
+                .old-price {
+                    text-decoration: line-through;
+                    margin-right: 0.5rem;
+                }
+            }
+
+            .discount {
+                @include display-flex-center;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                border-radius: 50%;
+                padding: 0.7rem;
+                color: $bool-lighter;
+                background-color: $bool-danger;
+                aspect-ratio: 1;
             }
         }
     }

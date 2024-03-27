@@ -29,7 +29,8 @@ export default {
             <span v-if="card.discount !== null" class="old-price">{{ card.price }}&euro;</span>
         </div>
 
-        <div @click="card.isInFavorite = !card.isInFavorite" class="heart" :class="{'red': card.isInFavorite}">&hearts;
+        <div @click="card.isInFavorite = !card.isInFavorite" class="heart" :class="{ 'red': card.isInFavorite }">
+            <span>&hearts;</span>
         </div>
 
     </div>
